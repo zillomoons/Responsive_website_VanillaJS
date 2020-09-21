@@ -97,13 +97,19 @@ body.noscroll {
   overflow: hidden;
 }
 
+h1, h2, h3 {
+  margin-top: 0px;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
 }
 
 .container {
-  padding-left: 1.5rem;
+  padding-top: 2.25rem;
   padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -131,15 +137,22 @@ a, a:visited, a:hover {
 }
 
 .button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to right, #31d35c, #2bb7da);
   border: 0;
   border-radius: 50px;
+  color: white;
+  font-size: 0.875rem;
   cursor: pointer;
   font-weight: 400;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 63.9375em) {
@@ -262,14 +275,41 @@ a, a:visited, a:hover {
   opacity: 1;
 }
 
-.header__cta {
-  color: white;
-  font-size: 0.875rem;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+.hero__image {
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
 }
 
-.header__cta:hover {
-  opacity: 0.7;
+.hero__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/image-mockups.png");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.hero__text {
+  text-align: center;
+}
+
+.hero__text h1 {
+  font-weight: 300;
+  font-size: 2.3125rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: #2d314d;
+}
+
+.hero__text p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+  font-size: 0.875rem;
 }
 /*# sourceMappingURL=style.css.map */
