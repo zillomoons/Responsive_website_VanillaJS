@@ -411,7 +411,7 @@ a, a:visited, a:hover {
     width: 150%;
     height: 100%;
     background-image: url("/images/bg-intro-desktop.svg");
-    background-size: 122%;
+    background-size: 126%;
     background-repeat: no-repeat;
     background-position: 0% 83%;
   }
@@ -532,5 +532,37 @@ a, a:visited, a:hover {
 .feature__description {
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+.articles {
+  background-color: #fafafa;
+}
+
+@media (min-width: 40em) {
+  .articles__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 64em) {
+  .articles__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.articles__image {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 11,25rem;
 }
 /*# sourceMappingURL=style.css.map */

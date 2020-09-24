@@ -1,0 +1,29 @@
+.articles {
+    background-color: $veryLightGray;
+    
+    &__grid {
+        
+        @include breakpoint-up(medium){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @include breakpoint-up(large){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    }
+
+    &__item {
+
+    }
+    &__image {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 11,25rem;
+    }
+}
